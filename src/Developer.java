@@ -5,8 +5,7 @@ public class Developer {
     private int devMobile;
     private String devEmail;
     private String devUsername;
-    private String devPw;
-    private String devAddress;
+
 
 
     //default constructor
@@ -23,5 +22,29 @@ public class Developer {
         //saveDeveloper()
 
         //searchDeveloper()
+
+
     }
+    //ADD DEV
+    public void addDev(int memberId){
+        Database newConnection = new Database();
+
+        try{
+        newConnection.addDeveloper(memberId);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
+    //delete developer
+    public void deleteDev(int memberId){
+        Database newConnection = new Database();
+
+        try{
+            newConnection.deleteDeveloper(memberId);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
 }
